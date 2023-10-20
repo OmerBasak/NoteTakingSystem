@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=0.7" />
+<title>Notes</title>
+<meta name="description" content="Simple note taking system" />
+<meta name="keywords" content="notes,online notes,notes app,free notes,get notes,notes shortener,notepad" />
+<meta property="og:title" content="Notes" />
+<meta property="og:description" content="A free note-taking app. Online Notes on everywhere. " />
+<meta property="og:url" content="{{ url_for('Index') }}" />
+<meta property="og:site_name" content="notes" />
+<meta property="og:type" content="website" />
+<meta name="”robots”" content="index, follow">
+<meta name="googlebot" content="All, Index, Follow">
+<link rel="image_src" type="image/jpeg" href="/static/styles/theme/images/logo.png" />
+
+<link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+
+<link href="/static/styles/notes.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<form method="POST">
+<div class="mainDiv">  <center> <h1><img src="/static/styles/theme/images/takenote.png" title="Onion Notes" height="40" width="223" /></h1> </center>  <div class="programArea">
+</br>
+
+<table class="grayBar">
+<tr>
+<td class="barsol"></td>
+<td class="barback">
+<a href="{{ url_for('Index') }}" title="Notes"><img src="/static/styles/theme/images/logo.png" class="logo" title="notes" alt="Notes Logo" height="45" width="190" /></a>
+
+<div class="menu">
+<input id="btnShort" type="submit" class="short" value="Submit" />
+<input id="btnAccount" type="button" class="account" value="Account" />
+<input type="button" class="myNotesDisable" value="My Notes" /> </div>
+</td>
+<td class="barsag"></td>
+</tr>
+</table>
+<div class="notesArea">
+<label for="notesTextAreaID">
+<textarea id="notesTextAreaID" name="textarea" class="notesTextArea" rows="2" cols="25">{{ note }}</textarea>
+</label>
+</div>
+<table class="width100">
+<tr>
+<td class="notespagebottom1">&nbsp;</td>
+<td class="notespagebottom2">&nbsp;</td>
+<td class="notespagebottom3">&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="adverArea">
+<table class="width100">
+<tr>
+<td class="barsol">&nbsp;</td>
+<td class="barback">
+<div class="myNotesArea"> <img src="/static/styles/theme/images/takenote.png" class="adverWhatsNotes" /></div></td>
+<td class="barsag">&nbsp;</td>
+</tr>
+</table>
+<div class="notesArea">
+<div class="notesTextArea">
+<div class="scrollArea">
+<div style="padding-bottom: 10px;">
+</div>
+<br>
+<br>
+
+</div>
+</div>
+</div>
+<table class="width100">
+<tr>
+<td class="notespagebottom1">&nbsp;</td>
+<td class="notespagebottom2">&nbsp;</td>
+<td class="notespagebottom3">&nbsp;</td>
+</tr>
+</table>
+</div> </div>
+<div id="messageback" class="messageback" style="width: 1536px; height: 100vh; opacity: 0.5; display: block;"></div>
+<div class="messageBOXback" style="top: 80px; left: 558px; display: block;"></div>
+<div id="msgBOXshort" class="message" style="top: 80px; left: 558px; display: block;">
+<table class="width100">
+<tbody><tr>
+<td class="auto-style1">&nbsp;</td>
+<td class="auto-style2">
+<h6 id="shortNoteH1">Shortened Note Link</h6>
+</td>
+<td class="auto-style3">&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">&nbsp;</td>
+<td class="auto-style9">
+<div id="sonuc"> <div class="shortURL">
+<a href="{{ url_for('appIndex', code=code) }}"> Note Code: {{ code }}
+</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div><div id="messageBOX" class="message">
+<table class="width100">
+<tr>
+<td class="auto-style2">
+
+</td>
+</tr>
+
+</table>
+</div>
+<div class="footer">
+<h3>Notes</h3>
+
+<div class="socialArea">
+<p>Contact: admin@blabla.com</a></p>
+</div>
+
+</div>
+</body>
+</html>
